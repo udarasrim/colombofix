@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ColomboFix - Trusted Home Repair</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; }
+    header { background: #005f73; color: white; padding: 1.5rem; text-align: center; }
+    nav { display: flex; justify-content: center; margin-top: 1rem; }
+    nav button { margin: 0 5px; padding: 5px 10px; border: none; background: #0a9396; color: white; cursor: pointer; border-radius: 5px; }
+    section { padding: 2rem; max-width: 800px; margin: auto; background: white; margin-top: 1rem; border-radius: 8px; }
+    h2 { color: #005f73; }
+    .services li { margin-bottom: 8px; }
+    .whatsapp-button {
+      background-color: #25d366;
+      color: white;
+      padding: 15px 25px;
+      text-align: center;
+      border-radius: 5px;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ColomboFix</h1>
+    <p>Trusted Home Renovation & Repair Services in Colombo</p>
+  </header>
+
+  <nav>
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('si')">සිංහල</button>
+    <button onclick="setLang('ta')">தமிழ்</button>
+  </nav>
+
+  <section id="about">
+    <h2 data-en="About Us" data-si="අපි ගැන" data-ta="எங்களை பற்றி">About Us</h2>
+    <p data-en="We are a friendly and efficient local repair service in Colombo. We handle any kind of home renovation or small repair work with care and professionalism."
+       data-si="අපි යළි නිමවා දැමීම සහ අලුත්වැඩියා කිරීමේ විශේෂඥයින් වන හිතකර සහ කාර්යක්ෂම කණ්ඩායමක්."
+       data-ta="நாங்கள் நட்பான மற்றும் திறமையான கொழும்பு வீட்டு பழுது சரிப்பார்ப்பு மற்றும் மேம்பாட்டு சேவையை வழங்குகிறோம்.">
+      We are a friendly and efficient local repair service in Colombo. We handle any kind of home renovation or small repair work with care and professionalism.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 data-en="Our Services" data-si="අපගේ සේවාවන්" data-ta="எங்கள் சேவைகள்">Our Services</h2>
+    <ul class="services">
+      <li>✔️ Wall Painting</li>
+      <li>✔️ Plumbing</li>
+      <li>✔️ Electrical Repairs</li>
+      <li>✔️ Re-Roofing</li>
+      <li>✔️ Small Household Repairs</li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2 data-en="How It Works" data-si="මෙය ක්‍රියාත්මක වන්නේ කෙසේද" data-ta="இது எப்படி வேலை செய்கிறது">How It Works</h2>
+    <ol>
+      <li>📞 Contact us on WhatsApp</li>
+      <li>👷 We visit your site and provide an estimate</li>
+      <li>🛠️ Work begins on your preferred day if you agree</li>
+    </ol>
+  </section>
+
+  <section id="why">
+    <h2 data-en="Why Choose Us" data-si="අපව තෝරාගන්නා හේතු" data-ta="ஏன் நம்மை தேர்ந்தெடுக்க வேண்டும்">Why Choose Us</h2>
+    <ul>
+      <li>👍 Trusted and friendly service</li>
+      <li>⏱️ On-time and efficient</li>
+      <li>📍 Colombo-based local experts</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact Us" data-si="අප හා සම්බන්ධ වන්න" data-ta="எங்களை தொடர்பு கொள்ள">Contact Us</h2>
+    <p>📍 Service Area: Colombo Only</p>
+    <a class="whatsapp-button" href="https://wa.me/9410002000" target="_blank">Message us on WhatsApp</a>
+  </section>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+  </script>
+</body>
+</html>
